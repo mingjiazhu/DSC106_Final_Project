@@ -21,15 +21,18 @@ function plotPie2019(){
             align: 'center',
             style: {
                 color: 'white',
-            }
+            },
+            x: -95
         },
         legend: {
-            enabled: false,
-            align: 'left',
+            align: 'right',
             verticalAlign: 'bottom',
             layout: 'vertical',
             x: -10,
-            y:-20
+            y:-20,
+            itemStyle: {
+                color: 'white'
+            },
         },
         accessibility: {
             point: {
@@ -49,23 +52,6 @@ function plotPie2019(){
                 },
                 showInLegend: true
             },
-            series: {
-                point: {
-                  events: {
-                    legendItemClick: function() {
-                      return false
-                    }
-                  }
-                },
-                states: {
-                    inactive: {
-                      opacity: 1
-                    },
-                    hover: {
-                        enabled: false
-                    }
-                }
-            }
         },
         series: [{
             name: 'Total Sale Percentage',
@@ -124,7 +110,7 @@ function plotPie2015(){
             style: {
                 color: 'white',
             },
-            x: 86
+            x: 88
         },
         legend: {
             align: 'left',
@@ -135,9 +121,6 @@ function plotPie2015(){
             itemStyle: {
                 color: 'white'
             },
-            tooltip: {
-                enabled: false
-            }
         },
         credits: {
             enabled: false
@@ -152,23 +135,6 @@ function plotPie2015(){
                 },
                 showInLegend: true
             },
-            series: {
-                point: {
-                  events: {
-                    legendItemClick: function() {
-                      return false
-                    }
-                  }
-                },
-                states: {
-                    inactive: {
-                      opacity: 1
-                    },
-                    hover: {
-                        enabled: false
-                    }
-                }
-            }
         },
         series: [{
             name: 'Total Sale Percentage',
