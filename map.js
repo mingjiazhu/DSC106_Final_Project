@@ -322,7 +322,7 @@ function plotMap2019() {
         } else if (elem[1] == 3){
             elem.push('#E3BAA8');
         } else if (elem[1] == 4){
-            elem.push('#2E8364');
+            elem.push('#AA7B6F');
         } else if (elem[1] == 5){
             elem.push('#FED797');
         }
@@ -427,7 +427,7 @@ function plotMap2019() {
             name: 'Health Life Expectancy'
         },{
             data: free,
-            color: '#2E8364',
+            color: '#AA7B6F',
             keys: ['hc-key', 'value', 'color'],
             name: 'Freedom of Choice'
         },{
@@ -768,7 +768,7 @@ function plotMap2015() {
         } else if (elem[1] == 3){
             elem.push('#E3BAA8');
         } else if (elem[1] == 4){
-            elem.push('#2E8364');
+            elem.push('#AA7B6F');
         } else if (elem[1] == 5){
             elem.push('#FED797');
         }
@@ -873,7 +873,7 @@ function plotMap2015() {
             name: 'Health Life Expectancy'
         },{
             data: free,
-            color: '#2E8364',
+            color: '#AA7B6F',
             keys: ['hc-key', 'value', 'color'],
             name: 'Freedom of Choice'
         },{

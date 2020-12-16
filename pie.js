@@ -84,7 +84,7 @@ function plotPie2019(){
             }, {
                 name: 'Freedom of Choice',
                 y: 100 * freedom_percent,
-                color: '#2E8364', 
+                color: '#AA7B6F', 
             }, {
                 name: 'Trust in Government',
                 y: 100 * trust_percent,
@@ -187,7 +187,7 @@ function plotPie2015(){
             }, {
                 name: 'Freedom of Choice',
                 y: 100 * freedom_percent,
-                color: '#2E8364',
+                color: '#AA7B6F',
             }, {
                 name: 'Trust in Government',
                 y: 100 * trust_percent,
