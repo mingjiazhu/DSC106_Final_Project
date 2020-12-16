@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<!--
+	Broadcast by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>DSC 106 Final Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src='map.js'> </script>
+		<script src='polar.js'> </script>
+		<script src='data.js'> </script>
+		<script src="https://code.highcharts.com/maps/highmaps.js"></script>
+		<script src="https://code.highcharts.com/highcharts-more.js"></script>
+		<script src="https://code.highcharts.com/mapdata/custom/world-palestine-highres.js"></script>
+		<script src="https://code.highcharts.com/highcharts.src.js"></script>
+		<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script src="charts.js"></script>
+		<script src="pie.js"></script>
+		<script src="polar.js"></script>
+		<script src="data.js"></script>
+		<script src="data-2015.js"></script>
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header">
+				<h1>DSC 106 Final Project</h1>
+			</header>
+
+		<!-- 
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav> -->
+
+			<!-- Banner -->
+			<!--
+				To use a video as your background, set data-video to the name of your video without
+				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
+				formats to work correctly.
+			-->
+				<section id="banner" background="images/background.jpeg">
+					<div class="inner">
+						<header>
+							<h1>World Happiness Report</h1>
+							<p>BY Hwang Yu, Mingjia Zhu</p>
+						</header>
+						<!-- <a href="#main" class="button big alt scrolly">Dignissim</a> -->
+					</div>
+
+				</section>
+
+		<!-- Main -->
+			<div id="main">
+
+			<!-- One -->
+				<section class="wrapper style1">
+					<div class="inner">
+						<header class="align-center">
+							<h2>What are the Most Important Traits of a Happy Country?</h2>
+							<p>The World Happiness Report ranks countries based on how happy a citizen is with themselves in a country. The World Happiness Report has several categories that surveys citizens in order to get a uniform score of the country’s happiness. In the <a href = 'https://www.kaggle.com/unsdsn/world-happiness' target = '_blank'> collection of World Happiness Report from 2015 to 2019</a>, the top 6 factors of happiness that explains for higher ranking among countries are GDP per capita, social support, health life expectancy, freedom to make life choices, generosity, and perceptions of corruption. However, we expect that despite the change in years GDP per capita, social scores, and life expectancy score will consistently be the major impact in a country’s happiness score. In this website, we will experiment to see which factors affect the happiness of a country by comparing the 2015’s report to 2019’s report.
+								
+							</p>
+						</header>
+						
+					</div>
+				</section>
+
+			<!-- Two -->
+			<section class="wrapper style1">
+				<div class="inner">
+					<header class="align-center">
+						<h2>World Map of Countries Color Coded by Best Attributes</h2>
+					</header>
+					<section id="maps" class="chart-parent--container">
+						<section id="map-2015" class="chart--container"></section>
+						<section id="map-2019" class="chart--container"></section>
+					</section>
+					<p class="align-center">*White colored regions are regions that are not accounted for in the Happiness Score Report.</p>
+					<p class="align-center" id="description">In 2015, GDP per capita and social support covered roughly equal amounts as the best attribute of happiness score all over the world. But in 2019, social support has overtaken most of the countries in the world.</p>
+					
+						<script>
+							plotMap2019();
+							plotMap2015();
+						</script>
+				</div>
+			</section>
+
+
+			<!-- Two -->
+				<section class="wrapper style2">
+					<div class="inner">
+						<header>
+							<h2>Attributes in Relation to Happiness Score</h2>
+							<p>Scatter plots that show the correlation between happiness score and each factor</p>
+						</header>
+						
+							<div class="flex flex-tabs">
+								<ul class="tab-list">
+									<li><a href="#" data-tab="tab-1" class="active">GDP per capita</a></li>
+									<li><a href="#" data-tab="tab-2">Social support</a></li>
+									<li><a href="#" data-tab="tab-3">Life expectancy</a></li>
+									<li><a href="#" data-tab="tab-4">Freedom</a></li>
+									<li><a href="#" data-tab="tab-5">Trust</a></li>
+								</ul>
+								<div class="tabs">
+										<!-- Tab 1 -->
+										<div class="tab tab-1 flex flex-3 active" id="scatter-1">
+										</div>
+									
+										<script>
+											makeScatter1();
+										</script>
+									<!-- Tab 2 -->
+										<div class="tab tab-2 flex flex-3" id="scatter-2">
+			
+										</div>
+										<script>
+											makeScatter2();
+										</script>
+
+									<!-- Tab 3 -->
+										<div class="tab tab-3 flex flex-3" id="scatter-3">
+											
+										</div>
+										<script>
+											makeScatter3();
+										</script>
+
+									<!-- Tab 4 -->
+										<div class="tab tab-4 flex flex-3" id="scatter-4">
+												
+										</div>
+										<script>
+											makeScatter4();
+										</script>
+
+									<!-- Tab 5 -->
+										<div class="tab tab-5 flex flex-3" id="scatter-5">
+													
+										</div>
+										<script>
+											makeScatter5();
+										</script>
+									
+								</div>
+							</div>
+					</div>
+					<br>
+					<p class="align-center" id="description2">In both 2015 and 2019, compared to freedom and trust, there are stronger correlations between GDP per capita, social support, life expectancy and happiness score, respectively.
+					</p>
+				</section>
+
+			<!-- Three -->
+				<section class="wrapper style2">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Ranks of Top Ten Countries in each Attributes</h2>
+							<p>Rankflow charts that show the ranks of top 10 countries in each year</p>
+						</header>
+				
+						
+							<div class="mytab" id="tab-clicks">
+								
+								<a href="#?" class="active" id="year-button" type='submit' onclick='makeRank2015()'>2015</a>
+								<a href="#?" id="year-button" type='submit' onclick='makeRank2019()'>2019</a>
+							</div>
+							<br>
+							<div id="rankschar"></div>
+
+							<!-- <div class="tabs">
+								
+								<div class="tab tab-11 flex flex-3 active" id="rank-2015">
+								</div>
+								<script>
+									makeRank2015();
+								</script>
+								
+								<div class="tab tab-22 flex flex-3" id="rank-2019">
+								</div>
+								<script>
+									makeRank2019();
+								</script>
+								
+							</div> -->
+					
+						
+					</div>
+					<br>
+					<p class="align-center" id="description2">In both 2015 and 2019, we could see that the countries that ranked high in happiness score (top 3) also ranked high in GDP per capita, social support or life expectancy.
+
+					</p>
+				</section>
+
+				<section class="wrapper style2">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Attributes of Top Ten Countries</h2>
+							<p>Spider-web charts that show the ranks of top 10 countries in each year</p>
+						</header>
+				
+						<section id="polars" class="chart-parent--container">
+							<section id="polar-2015" class="chart--container"></section>
+							<section id="polar-2019" class="chart--container"></section>
+						</section>
+						<script>
+							polarChart2015();
+							polarChart2019();
+						</script>
+						
+					</div>
+					<br>
+					<p class="align-center" id="description2">In 2015 and  2019, the top ten countries of each report have GDP per capita, social support, and life expectancy as the best attributes for the country’s happiness score.
+					</p>
+				</section>
+
+				<section class="wrapper style2">
+					<div class="inner">
+						<header class="align-center">
+							<h2>Conclusion</h2>
+							<p>Pie charts that show the weights of each factor in each year</p>
+						</header>
+				
+						<section id="pies"></section>
+
+						<section id="polars" class="chart-parent--container">
+							<section id="pie2015" class="chart--container"></section>
+							<section id="pie2019" class="chart--container"></section>
+						</section>
+						<script>
+							plotPie2015();
+							plotPie2019();
+							//plotPie();
+						</script>
+						
+					</div>
+					
+					<br>
+					<p class="align-center" id="description2">In 2015, GDP per capita, social support, and life expectancy attributes cover approximately 45% of the happiness scores for all countries. In 2019, GDP per capita, social support, and life expectancy attributes cover more than half of the happiness scores for all countries.
+					</p>
+					
+					<p class="align-center" id="description2">As we expected, there are no changes of the best attributes in happiness score despite the change in years. The best attributes continue to cover for the majority of the happiness scores as the years go by. We conclude that high scores in GDP per capita, social support, and life expectancy categories to be the best indicators for a happy country.
+					</p>
+				</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
